@@ -1,38 +1,422 @@
 .App {
   text-align: center;
+  font-family: "Poppins";
+}
+body {
+  background-image: url("./assets/images/main-background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.profile {
+  display: flex;
+  background: none;
+  border: none;
+}
+.addProperty {
+  display: flex;
+  background: none;
+  border: none;
+}
+.rightNav {
+  float: right;
+}
+.leftNav {
+  display: flex;
+}
+.navBar {
+  border-bottom: 1px solid #ebebeb;
+}
+.addProperty {
+  border-radius: 25px;
+  border: 1px solid #dddddd;
+  padding: 10px 20px;
+}
+.addProperty:hover {
+  border: 2px solid #c49a50;
+  color: #c49a50;
+  font-weight: 600;
+}
+.profile {
+  border-radius: 25px;
+  border: 1px solid #dddddd;
+  padding: 8px 20px;
+  margin-left: 10px;
+}
+.profile:hover {
+  border: 2px solid #c49a50;
+  color: #c49a50;
+  font-weight: 600;
+}
+.profileImg {
+  padding-left: 10px;
+}
+#hamburger-icon {
+  background-image: url(./assets/images/hamburger-gray.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 10px;
+  background-position: bottom center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.profile:hover > #hamburger-icon {
+  background-image: url(./assets/images/hamburger-orange.svg);
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.footer {
+  position: fixed;
+  bottom: 0;
+  height: 50px;
+  border-top: 1px solid #ebebeb;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  font-weight: 600;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.heroText {
+  width: 456px;
+  font-family: "Poppins";
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 55px;
+  letter-spacing: -0.025em;
+  text-align: center;
+}
+.place {
+  color: #c49a50;
+}
+.hero {
+  height: 100%;
+  padding-top: 145px;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  row-gap: 30px;
+}
+.buyBtn {
+  background-color: #222222;
+  border-radius: 50px;
+  padding: 12px 41px;
+  cursor: pointer;
+  border: 1px solid #717171;
+}
+.buyBtn:hover {
+  background-color: #fff;
+  border-radius: 50px;
+  padding: 12px 41px;
+  cursor: pointer;
+  border: 1px solid #717171;
+}
+.buyBtn > a {
+  text-decoration: none;
   color: white;
 }
+.buyBtn:hover > a {
+  text-decoration: none;
+  color: #222;
+}
+.rentBtn {
+  background-color: white;
+  border-radius: 50px;
+  padding: 12px 41px;
+  cursor: pointer;
+  border: 1px solid #717171;
+  margin-left: 20px;
+}
+.rentBtn:hover {
+  background-color: #222;
+  border-radius: 50px;
+  padding: 12px 41px;
+  cursor: pointer;
+  border: 1px solid #717171;
+  margin-left: 20px;
+}
+.rentBtn > a {
+  text-decoration: none;
+  color: #222222;
+}
+.rentBtn:hover > a {
+  text-decoration: none;
+  color: #fff;
+}
+.bckImg {
+  width: 100%;
+  position: absolute;
+  bottom: 30px;
+  margin: auto;
+  display: flex;
+  text-align: center;
+  margin-right: 100px;
+}
+.requestCard {
+  border: 1px solid #c0c0c0;
+  border-radius: 10px;
+  text-align: start;
+  padding: 15px 26px;
+  width: 428px;
+  height: 93px;
+  margin-top: 50px;
+}
+.submitReq {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.025em;
+  color: #222222;
+  margin-bottom: 0;
+}
+.lorem {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: -0.025em;
 
-.App-link {
-  color: #61dafb;
+  /* Gray */
+
+  color: #717171;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.location,
+.property {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  /* identical to box height */
+
+  letter-spacing: -0.025em;
+
+  /* Black */
+
+  color: #222222;
+  margin-bottom: 0;
+}
+.locText,
+.propText {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  /* identical to box height, or 125% */
+
+  letter-spacing: -0.025em;
+
+  /* Gray */
+
+  color: #717171;
+}
+.selected {
+  background-color: #222222;
+  border-radius: 50px;
+  padding: 12px 41px;
+  cursor: pointer;
+  border: 1px solid #717171;
+  margin-left: 20px;
+}
+.unselected {
+  background-color: white;
+  border-radius: 50px;
+  padding: 12px 41px;
+  cursor: pointer;
+  border: 1px solid #717171;
+  margin-left: 20px;
+}
+.selected > a {
+  text-decoration: none;
+  color: white;
+}
+.unselected > a {
+  text-decoration: none;
+  color: #222222;
+}
+
+.showSearchBox {
+  width: 878px;
+  height: 467px;
+  margin-top: 10px;
+  border-radius: 40px;
+  border: 1px solid #ddd;
+  background-color: white;
+  z-index: 999;
+}
+.hideSearchBox {
+  display: none;
+}
+.showRequestCard {
+  border: 1px solid #c0c0c0;
+  border-radius: 10px;
+  text-align: start;
+  padding: 15px 26px;
+  width: 428px;
+  height: 93px;
+  margin-top: 50px;
+}
+.hideRequestCard {
+  display: none;
+}
+.selectedLocCard > .location {
+  color: #c49a50;
+}
+.selectedLocCard {
+  background-color: #fff;
+  border: 2px solid #c49a50;
+  padding: 22px 42px 0;
+  border-radius: 74px;
+}
+.selectedLocCard > .locContent {
+  border: none;
+}
+.propCard,
+.filterCard,
+.searchCard {
+  padding: 22px 0;
+}
+.locCard {
+  padding: 22px 42px 0;
+  border-right: 0;
+  border-radius: 74px 0 0 74px;
+}
+.locCard:hover {
+  padding: 22px 42px 0;
+  border: 2px solid #717171;
+  border-radius: 74px;
+}
+.locCard:hover > .locContent {
+  border: none;
+}
+.searchField {
+  border-radius: 74px;
+  border: 1px solid #c0c0c0;
+
+  height: 85px;
+  width: 880px;
+}
+.locContent,
+.propContent,
+.filterContent {
+  border-right: 1px solid #ebebeb;
+  height: 40px;
+}
+.propCard {
+  padding-left: 20px;
+}
+.propCard:hover {
+  border-radius: 74px;
+  border: 2px solid #717171;
+  padding-bottom: 18px;
+}
+.propCard:hover > .propContent {
+  border: none;
+}
+.searchCard {
+  border-left: 0;
+  border-radius: 0 74px 74px 0;
+}
+.searchCard:hover {
+  height: 83px;
+  width: 83px;
+  border-radius: 50%;
+  border: 2px solid #c49a50;
+}
+.filterCard:hover {
+  border: 2px solid #717171;
+  height: 83px;
+  width: 83px;
+  border-radius: 50%;
+}
+.filterCard:hover > .filterContent {
+  border: none;
+}
+.selectedLocCard > .locContent > .location {
+  color: #c49a50;
+}
+.mobileSearch,
+.mobileWanted,
+.mobileFooter {
+  display: none;
+}
+@media screen and (max-width: 792px) {
+  .navBar,
+  .footer,
+  .searchField,
+  .bckImg,
+  .showRequestCard {
+    display: none;
   }
-  to {
-    transform: rotate(360deg);
+  .mobileSearch {
+    display: block;
+    box-shadow: 0px 3px 60px 0px #00000033;
+    background-color: #fff;
+    border-radius: 74px;
+    width: 100%;
+    padding: 15px 31px;
+    width: 95%;
+    margin: auto;
+  }
+  .mobileSearch input {
+    border: none;
+  }
+  .mobileSearch input:focus {
+    outline: none;
+  }
+  .mobileFooter {
+    display: block;
+    height: 99px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+  }
+  .mobileLorem {
+    padding: 25px 65px;
+
+    display: block;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: -0.025em;
+
+    /* Gray */
+
+    color: #717171;
+  }
+  #wanted {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    /* identical to box height, or 129% */
+
+    text-align: center;
+    letter-spacing: -0.025em;
+
+    /* Gray */
+
+    color: #717171;
+    border: 1px solid #717171;
+    border-radius: 10px;
+    padding: 12px 34px;
+    background-color: transparent;
+  }
+  .heroText {
+    width: 100%;
+    padding: 15px;
+    font-style: normal;
+    font-weight: 275;
+    font-size: 57px;
+    line-height: 60px;
+    /* or 105% */
+
+    letter-spacing: -0.025em;
+
+    /* Gray 2 */
+
+    color: #c0c0c0;
+  }
+  .place {
+    font-weight: 400;
+  }
+  .mobileWanted {
+    display: block;
   }
 }

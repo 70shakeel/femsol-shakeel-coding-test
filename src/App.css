@@ -107,11 +107,11 @@ body {
   cursor: pointer;
   border: 1px solid #717171;
 }
-.buyBtn > a {
+.buyBtn > button {
   text-decoration: none;
   color: white;
 }
-.buyBtn:hover > a {
+.buyBtn:hover {
   text-decoration: none;
   color: #222;
 }
@@ -131,7 +131,8 @@ body {
   border: 1px solid #717171;
   margin-left: 20px;
 }
-.rentBtn > a {
+.rentBtn {
+  background: none;
   text-decoration: none;
   color: #222222;
 }
@@ -212,6 +213,7 @@ body {
   cursor: pointer;
   border: 1px solid #717171;
   margin-left: 20px;
+  color: #fff;
 }
 .unselected {
   background-color: white;

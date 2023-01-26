@@ -25,7 +25,7 @@ function Hero() {
               setRentBtn(selected === "selected" ? "selected" : "unselected");
             }}
           >
-            <a href="#">Buy</a>
+            Buy
           </span>
           <span
             className={rentBtn}
@@ -34,7 +34,7 @@ function Hero() {
               setSelected(selected === "selected" ? "unselected" : "selected");
             }}
           >
-            <a href="#">Rent</a>
+            Rent
           </span>
         </div>
         {/* mobile search field */}
